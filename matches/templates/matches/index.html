@@ -1,0 +1,30 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<h1>Matches list</h1>
+<p>here is some cool text hahaha example 123 look at me!</p>
+
+<table class="matches-table" border="0px" >
+    <thead>
+      <th>Time</th>
+      <th>Team A</th>
+      <th>Score</th>
+      <th>Team B</th>
+      <th>Tournament</th>
+      <th>Live Bet</th>
+    </thead>
+  {% for match in match_list %}
+    <tr>
+      <td><a href="#">{{ match.get_hour }}</a></td>
+      <td><a href="#">{{ match.team1 }}</a></td>
+      <td>{{ team.get_score }}</td>
+      <td><a href="#">{{ match.team2 }}</a></td>
+      <td><a href="#">{{ match.tournament.name }}</a></td>
+      <td><a href="#">LIVE BET</a></td>
+    </tr>
+  {% endfor %}
+</table>
+
+
+{% endblock %}

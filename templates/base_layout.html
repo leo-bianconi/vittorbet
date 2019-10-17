@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
   </head>
   <body>
-
+    <div class="upper-logo">
+      <img src="{% static 'logo.png' %}" alt="Vittoronebets" height="20%" width="20%">
+    </div>
+    <div class="navbar">
+      <nav>
+        <li><a href="{% url 'accounts:logout' %}">logout</a></li>
+      </nav>
+    </div>
     <div class="wrapper">
       {% block content %}
 
