@@ -1,0 +1,19 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vittorbet</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

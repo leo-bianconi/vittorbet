@@ -26,7 +26,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('successfully signed up')
+            return HttpResponse('successfully signed up')
 
     else:
         form = UserCreationForm()
